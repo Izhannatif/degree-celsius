@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Normal */
+
+@font-face {
+  font-family: 'Regular';
+  src: url('./assets/fonts/integralcf-regular.otf'), format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Medium';
+  src: url('./assets/fonts/integralcf-medium.otf'), format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Demibold';
+  src: url('./assets/fonts/integralcf-demibold.otf'), format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bold';
+  src: url('./assets/fonts/integralcf-bold.otf'), format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Extrabold';
+  src: url('./assets/fonts/integralcf-extrabold.otf'), format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Heavy';
+  src: url('./assets/fonts/integralcf-heavy.otf'), format('opentype');
+  font-style: normal;
+}
+
+/* Italic */
+
+@font-face {
+  font-family: 'RegularItalic';
+  src: url('./assets/fonts/integralcf-regularoblique.otf'), format('opentype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MediumItalic';
+  src: url('./assets/fonts/integralcf-mediumoblique.otf'), format('opentype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DemiboldItalic';
+  src: url('./assets/fonts/integralcf-demiboldoblique.otf'), format('opentype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'BoldItalic';
+  src: url('./assets/fonts/integralcf-boldoblique.otf'), format('opentype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ExtraboldItalic';
+  src: url('./assets/fonts/integralcf-extraboldoblique.otf'), format('opentype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'HeavyItalic';
+  src: url('./assets/fonts/integralcf-heavyoblique.otf'), format('opentype');
+  font-style: italic;
+}
+
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #F0AA7B;
+  border-radius: 0px 9999px 0px 9999px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #A81F3D;
+}
+
+body{
+  overflow-x: hidden;
+}
