@@ -101,4 +101,12 @@
 
 body{
   overflow-x: hidden;
+  user-select: none;
+}
+
+.header-div{
+  background: url('https://uswalldecor.com/cdn/shop/products/DI0946.jpg?v=1581094932&width=823');
+  
+  box-shadow: 999px 999px 999px #0a0a0ade inset;
+  
 }
