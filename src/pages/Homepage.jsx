@@ -4,12 +4,18 @@ import Slider from 'react-slick';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
 import { FaArrowRightLong } from "react-icons/fa6";
 import image from '../assets/image.png'
-
-// Import Swiper styles
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import 'swiper/css';
+import comic1 from '../assets/comics/1.jpeg';
+import comic2 from '../assets/comics/2.jpeg';
+import comic3 from '../assets/comics/3.jpeg';
+import comic4 from '../assets/comics/4.jpeg';
+import comic5 from '../assets/comics/5.jpeg';
+import comic6 from '../assets/comics/6.jpeg';
+
+
 const Homepage = () => {
     const settings = {
         dots: false,
@@ -98,7 +104,7 @@ const Homepage = () => {
                 <div className='flex gap-5 flex-col'>
                     <div className='text-lg text-fire-brick font-medium px-20'>Comics</div>
                     <div className='px-20 flex items-end justify-between'>
-                        <div className='text-5xl tracking-wide font-medium text-light '>Discover <br /> All Comics</div>
+                        <div className='text-6xl tracking-wide font-medium text-light '>Discover All Comics</div>
                         <div className='flex gap-2 items-center px-10 font-medium text-sm text-fire-brick hover:gap-10 transition-all duration-300'>Swipe <FaArrowRightLong />
                         </div>
                     </div>
@@ -165,14 +171,15 @@ const Homepage = () => {
                                 600: { slidesPerView: 2 },
                             }}
                         >
-                            {characters.map((chapter, index) => (
+                            {characters.map((character, index) => (
                                 <SwiperSlide className='' key={index}>
                                     <div className="">
                                         <div className="overflow-hidden">
-                                            <img src={chapter.imgUrl} alt={chapter.title} className=" w-full object-cover" />
+                                            <img src={character.imgUrl} alt={character.title} className=" w-full object-cover" />
                                         </div>
-                                        <div className="p-2">
-                                            <h3 className="text-lg text-matte-black font-regular">{chapter.title}</h3>
+                                        <div className="px-5 flex justify-between items-center">
+                                            <h3 className="text-lg text-matte-black font-regular">{character.title}</h3>
+                                            <IoArrowForwardCircleOutline size={40} className='-rotate-45 text-midnight-blue hover:rotate-[360deg] transition-all duration-300 hover:scale-110' />
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -217,8 +224,9 @@ const Homepage = () => {
                             }}
                         >{reviews.map((review, index) => (
                             <SwiperSlide key={index}>
-                                <div className="bg-white p-6 shadow-lg rounded-lg h-[30vh] flex gap-5">
-                                    <img className='aspect-square object-contain rounded-full' src={review.imgUrl} alt="" srcset="" />
+                                <div className='h-8 w-8 bg-stone-200 relative top-4 -left-4 rotate-45'></div>
+                                <div className="bg-white p-6  h-[30vh] flex gap-5">
+                                    <img className='aspect-square object-contain rounded-full' src={review.imgUrl} alt="" />
                                     <div className="flex flex-col items-start justify-between gap-5">
                                         <div className="text-yellow-500">
                                             {'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}
@@ -233,6 +241,7 @@ const Homepage = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <div className='h-8 w-8 bg-stone-200 relative bottom-4 left-[97%] rotate-45'></div>
                             </SwiperSlide>
                         ))}
                         </Swiper>
@@ -242,6 +251,32 @@ const Homepage = () => {
             </div>
 
             {/* Homepage Fifth Div End */}
+
+            {/* Homepage Sixth Div Start */}
+            <div className='w-full h-full bg-light flex flex-col justify-center items-center p-10'>
+                <div className='w-full flex flex-col items-center justify-center'>
+                    <div className='text-lg text-fire-brick font-medium px-10 py-3'>Gallery</div>
+                    <div className='flex items-end justify-between px-10'>
+                        <div className='text-5xl tracking-wide font-medium text-matte-black'>
+                            Some of Our work
+                        </div>
+                    </div>
+                    <p className='w-2/3 text-center py-5 text-sm tracking-wide font-regular text-stone-700'>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio ipsum suscipit cum ex at ad molestias illo hic! Maxime explicabo voluptates laboriosam consequatur exercitationem ab, veniam dolorem aut sint doloremque!
+                    </p>
+                </div>
+
+                <div className='w-11/12 h-full grid grid-cols-3 grid-rows-2 py-10'>
+                    <img className='object-contain' src={comic1} alt="" />
+                    <img src={comic2} alt="" />
+                    <img src={comic3} alt="" />
+                    <img src={comic4} alt="" />
+                    <img src={comic5} alt="" />
+                    <img src={comic6} alt="" />
+                </div>
+
+            </div>
+            {/* Homepage Sixth Div End */}
 
         </section>
     )
