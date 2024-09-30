@@ -110,3 +110,15 @@ body{
   box-shadow: 999px 999px 999px #0a0a0ade inset;
   
 }
+
+.petal-1-bg{
+  background-image: url('./assets/comics/1.jpeg');
+  background-size: contain;
+  box-shadow: 0px 0px 10px rgba(201, 201, 201, 0.678);
+}
+.petal-2-bg{
+  background-image: url('./assets/comics/7.jpeg');
+  background-size: contain;
+  background-position: right;
+  box-shadow: 0px 0px 10px rgba(201, 201, 201, 0.678);
+}

@@ -81,9 +81,9 @@ const Homepage = () => {
             {/* Homepage Second Div Start */}
             <div className='h-[80vh] bg-light w-full flex justify-around items-center gap-20 px-10'>
                 <div className='w-1/2 flex gap-10 pl-10'>
-                    <div className='h-[60vh] w-1/2 bg-midnight-blue rounded-tr-full rounded-bl-full'>
+                    <div className='h-[60vh] w-1/2 bg-midnight-blue rounded-tr-full rounded-bl-full petal-1-bg'>
                     </div>
-                    <div className='h-[60vh] w-1/2 bg-fire-brick rounded-2xl rounded-br-full rounded-tl-full'>
+                    <div className="h-[60vh] w-1/2 bg-fire-brick rounded-2xl rounded-br-full rounded-tl-full petal-2-bg">
                     </div>
                 </div>
                 <div className='w-1/2 flex justify-center items-center h-full'>
@@ -91,7 +91,7 @@ const Homepage = () => {
                         <p className='font-medium p-2 text-fire-brick'>Featured Comics</p>
                         <p className='text-5xl font-extrabold w-3/4 pt-2 pb-6'>Announcing Gooodyng: The Polymath</p>
                         <p className='text-sm font-regular tracking-wide text-stone-600 w-3/4 pb-5'>Discover a world of thrilling adventures and unforgettable characters. Join our protagonist on their epic quest With stunning visuals and captivating storytelling, this comic series will leave you wanting more.</p>
-                        <CustomButton width='200' height='50' text={'Learn More'} color={'fill-midnight-blue'} />
+                        <CustomButton width='200' height='50' text={'Learn More'} color={'fill-fire-brick'} />
                     </div>
                 </div>
             </div>
