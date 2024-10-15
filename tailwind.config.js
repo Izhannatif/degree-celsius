@@ -12,7 +12,6 @@ export default {
         'fire-brick' : '#A81F3D',
         'matte-black': '#0A0A0A',
         'light':'#FAFAFA',
-
       },
       fontFamily: {
         regular: ['Regular'],

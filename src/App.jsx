@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import About from './pages/About';
 import CharacterPage from './pages/Character';
+import ChapterPage from './pages/Chapters';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           <Route path='/' element={<Homepage />} />
           <Route path='/about' element={<About />} />
           <Route path='/character/:characterId' element={<CharacterPage />} />
+          <Route path='/chapter/:chapterId' element={<ChapterPage />} />
+          
         </Routes>
         <Footer />
       </Router>

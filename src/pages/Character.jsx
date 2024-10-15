@@ -65,8 +65,8 @@ const CharacterPage = () => {
         fetchData();
     }, [characterId]);
 
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>Error: {error}</div>;
+    if (loading) return <div className='min-h-screen bg-matte-black text-2xl grid place-items-center font-demibold text-light'>Loading...</div>;
+    if (error) return <div className='min-h-screen bg-matte-black text-2xl grid place-items-center font-demibold text-light'>Error: {error}</div>;
 
     return (
         <>
@@ -97,17 +97,17 @@ const CharacterPage = () => {
                                 <hr className='border-fire-brick' />
                                 <div className="flex justify-between bg-tacao px-2 py-3">
                                     <strong>Gender</strong>
-                                    <span className="outfit  text-light">{`${!character.gender? "Unknown" : character.gender}`}</span>
+                                    <span className="outfit  text-light">{`${!character.gender ? "Unknown" : character.gender}`}</span>
                                 </div>
                                 <hr className='border-fire-brick' />
                                 <div className="flex justify-between bg-tacao px-2 py-3">
                                     <strong>Height</strong>
-                                    <span className="outfit  text-light">{`${!character.height? "Unknown" : character.height + " cm"}`}</span>
+                                    <span className="outfit  text-light">{`${!character.height ? "Unknown" : character.height + " cm"}`}</span>
                                 </div>
                                 <hr className='border-fire-brick' />
                                 <div className="flex justify-between bg-tacao px-2 py-3">
                                     <strong>Weight</strong>
-                                    <span className="outfit  text-light">{`${!character.weight? "Unknown" : character.weight + " cm"}`}</span>
+                                    <span className="outfit  text-light">{`${!character.weight ? "Unknown" : character.weight + " cm"}`}</span>
                                 </div>
                                 <hr className='border-fire-brick' />
                                 <div className="flex justify-between bg-tacao px-2 py-3">
@@ -117,7 +117,7 @@ const CharacterPage = () => {
                                 <hr className='border-fire-brick' />
                                 <div className="flex justify-between bg-tacao px-2 py-3">
                                     <strong>Occupation</strong>
-                                    <span className="outfit  text-light">{`${!character.occupation? "Unknown" : character.occupation}`}</span>
+                                    <span className="outfit  text-light">{`${!character.occupation ? "Unknown" : character.occupation}`}</span>
                                 </div>
                                 <hr className='border-fire-brick' />
                                 <div className="flex justify-between bg-tacao px-2 py-3">
@@ -132,17 +132,19 @@ const CharacterPage = () => {
                 <div className='w-full '>
                     <div className="mb-6">
                         <h2 className="text-2xl font-demibold pb-5">Personality</h2>
-                        <p>{character.personality}</p>
+                        <p className='outfit text-xl text-justify'>{character.personality}</p>
                     </div>
-                    <div className="mb-6">
-                        <h2 className="text-2xl font-demibold pb-5">Abilities</h2>
-                        {abilities.map(ability => (
-                            <div key={ability.id} className="mb-2">
-                                <h3 className="text-xl outfit font-bold p-2">{ability.ability_name}</h3>
-                                <p className='outfit text-lg p-2'>{ability.description}</p>
-                            </div>
-                        ))}
-                    </div>
+                    {abilities && (
+                        <div className="mb-6">
+                            <h2 className="text-2xl font-demibold pb-5">Abilities</h2>
+                            {abilities.map(ability => (
+                                <div key={ability.id} className="mb-2">
+                                    <h3 className="text-xl outfit font-bold p-2">{ability.ability_name}</h3>
+                                    <p className='outfit text-lg p-2'>{ability.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                     <div className="mb-6">
                         <h2 className="text-2xl font-demibold pb-5">Relationships</h2>
                         {relationships.map(rel => (
