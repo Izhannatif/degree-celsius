@@ -33,7 +33,7 @@ const Navbar = () => {
         <>
             <section className='w-full h-20 flex justify-between items-center px-4 md:px-10 bg-matte-black font-regular text-light'>
                 {/* Logo */}
-                <img src={logo} alt="logo" className='h-20 md:h-full p-1 z-20' />
+                <Link to={'/'}><img src={logo} alt="logo" className='h-20 p-1 z-30' /></Link>
 
                 {/* Desktop menu */}
                 <div className='hidden md:flex items-center gap-6 md:gap-8 w-full justify-center text-md tracking-wide'>
@@ -70,7 +70,7 @@ const Navbar = () => {
             <AnimatePresence>
                 {mobileMenuOpen && (
                     <motion.div
-                        className='fixed top-0 left-0 h-full w-full flex flex-col justify-center items-center bg-matte-black text-light z-10'
+                        className='h-full w-screen fixed top-0 left-0 flex flex-col justify-center items-center bg-matte-black text-light z-10'
                         initial={{ y: '-100%' }} // Start position offscreen
                         animate={{ y: 0 }} // Animate to visible state
                         exit={{ y: '-100%' }} // Exit animation back to offscreen
