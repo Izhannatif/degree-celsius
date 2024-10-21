@@ -31,7 +31,7 @@ const Wiki = () => {
     return (
         <section className='w-full h-full p-10'>
             <div className=' flex flex-col'>
-                <div className='text-3xl font-bold text-matte-black'>Characters</div>
+                <div className='text-4xl font-bold text-matte-black w-full text-center'>Characters</div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full py-10 gap-5'>
 
                     {
