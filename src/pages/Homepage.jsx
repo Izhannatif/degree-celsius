@@ -167,7 +167,7 @@ const Homepage = () => {
                                                 }
                                             </div>
                                             <div className="p-2">
-                                                <Link to={chapter.id ? `/chapter/${chapter.id}` : ''}><h3 className="text-lg text-fire-brick font-regular">{chapter.title}</h3></Link>
+                                                <Link state={{ posterUrl: chapter.poster_image_url }} to={chapter.id ? `/chapter/${chapter.id}` : ''}><h3 className="text-lg text-fire-brick font-regular">{chapter.title}</h3></Link>
                                             </div>
                                         </div>
                                     </SwiperSlide>

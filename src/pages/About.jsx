@@ -37,7 +37,7 @@ const About = () => {
                             <p className='text-3xl font-medium'>Join Our Community</p>
                             <div className='text-xl outfit font-medium text-stone-700 p-5'>
                                 <ul className='flex flex-col gap-5'>
-                                    <li className='flex gap-5 items-center'> <FaDiscord className='h-8 w-8 text-purple-800 transition-all duration-300' /> Discord - https://discord.gg/ybJumEEYk2</li>
+                                <a href='https://discord.gg/ybJumEEYk2'> <li className='flex gap-5 items-center'> <FaDiscord className='h-8 w-8 text-purple-800 transition-all duration-300' /> Discord</li> </a>
                                     <li className='flex gap-5 items-center'> <FaXTwitter className='h-8 w-8 text-black transition-all duration-300' /> Twitter - (TBD)</li>
                                     <li className='flex gap-5 items-center'> <FaYoutube className='h-8 w-8 text-red-600 transition-all duration-300' /> YouTube - (TBD)</li>
                                 </ul>
