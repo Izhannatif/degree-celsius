@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { supabase } from '../client/supabaseClient';
 
 const CharacterPage = () => {
@@ -39,11 +39,14 @@ const CharacterPage = () => {
                     .select(`
                         id,
                         relationship_description,
+                        character_id,
+                        related_to,
                         characters:related_to (name)
                     `)
                     .eq('character_id', characterId);
 
                 if (relationshipsError) throw relationshipsError;
+                console.log(relationshipsData)
                 setRelationships(relationshipsData);
 
                 // Fetch character quotes
@@ -66,7 +69,7 @@ const CharacterPage = () => {
     }, [characterId]);
 
     if (loading) return <div className='min-h-screen bg-matte-black text-2xl grid place-items-center font-demibold text-light'>Loading...</div>;
-    if (error) return <div className='min-h-screen bg-matte-black text-2xl grid place-items-center font-demibold text-light'>Error: {error}</div>;
+    if (error) return <div className='min-h-screen bg-matte-black text-2xl grid place-items-center font-bold outfit text-light'>Error: {error}</div>;
 
     return (
         <>
@@ -78,58 +81,58 @@ const CharacterPage = () => {
                     <div className="flex flex-col gap-5">
                         <h2 className="text-2xl font-demibold">Appearance</h2>
                         <p className='outfit text-lg'>{character.appearance}</p>
-                        
+
                     </div>
                 </div>
-                
 
-                    <div className='w-full grid place-items-center py-5'>
-                        <div className="w-full border border-fire-brick">
-                            <div className="flex flex-col gap-0">
-                                <div className="flex justify-between bg-tacao px-2 py-3 ">
-                                    <strong>Age</strong>
-                                    <span className="outfit text-light ">{`${!character.age ? "Unknown" : character.age}`}</span>
-                                </div>
-                                <hr className='border-fire-brick' />
-                                <div className="flex justify-between bg-tacao px-2 py-3">
-                                    <strong>Birthday</strong>
-                                    <span className="outfit  text-light">{`${!character.birthday ? "Unknown" : character.birthday}`}</span>
-                                </div>
-                                <hr className='border-fire-brick' />
-                                <div className="flex justify-between bg-tacao px-2 py-3">
-                                    <strong>Gender</strong>
-                                    <span className="outfit  text-light">{`${!character.gender ? "Unknown" : character.gender}`}</span>
-                                </div>
-                                <hr className='border-fire-brick' />
-                                <div className="flex justify-between bg-tacao px-2 py-3">
-                                    <strong>Height</strong>
-                                    <span className="outfit  text-light">{`${!character.height ? "Unknown" : character.height + " cm"}`}</span>
-                                </div>
-                                <hr className='border-fire-brick' />
-                                <div className="flex justify-between bg-tacao px-2 py-3">
-                                    <strong>Weight</strong>
-                                    <span className="outfit  text-light">{`${!character.weight ? "Unknown" : character.weight + " cm"}`}</span>
-                                </div>
-                                <hr className='border-fire-brick' />
-                                <div className="flex justify-between bg-tacao px-2 py-3">
-                                    <strong>Nationality</strong>
-                                    <span className="outfit  text-light">{`${!character.nationality ? "Unknown" : character.nationality}`}</span>
-                                </div>
-                                <hr className='border-fire-brick' />
-                                <div className="flex justify-between bg-tacao px-2 py-3">
-                                    <strong>Occupation</strong>
-                                    <span className="outfit  text-light">{`${!character.occupation ? "Unknown" : character.occupation}`}</span>
-                                </div>
-                                <hr className='border-fire-brick' />
-                                <div className="flex justify-between bg-tacao px-2 py-3">
-                                    <strong>Manga Debut</strong>
-                                    <span className="outfit  text-light">Chapter {character.manga_debut}</span>
-                                </div>
+
+                <div className='w-full grid place-items-center py-5'>
+                    <div className="w-full border border-fire-brick">
+                        <div className="flex flex-col gap-0">
+                            <div className="flex justify-between bg-tacao px-2 py-3 ">
+                                <strong>Age</strong>
+                                <span className="outfit text-light ">{`${!character.age ? "Unknown" : character.age}`}</span>
+                            </div>
+                            <hr className='border-fire-brick' />
+                            <div className="flex justify-between bg-tacao px-2 py-3">
+                                <strong>Birthday</strong>
+                                <span className="outfit  text-light">{`${!character.birthday ? "Unknown" : character.birthday}`}</span>
+                            </div>
+                            <hr className='border-fire-brick' />
+                            <div className="flex justify-between bg-tacao px-2 py-3">
+                                <strong>Gender</strong>
+                                <span className="outfit  text-light">{`${!character.gender ? "Unknown" : character.gender}`}</span>
+                            </div>
+                            <hr className='border-fire-brick' />
+                            <div className="flex justify-between bg-tacao px-2 py-3">
+                                <strong>Height</strong>
+                                <span className="outfit  text-light">{`${!character.height ? "Unknown" : character.height + " cm"}`}</span>
+                            </div>
+                            <hr className='border-fire-brick' />
+                            <div className="flex justify-between bg-tacao px-2 py-3">
+                                <strong>Weight</strong>
+                                <span className="outfit  text-light">{`${!character.weight ? "Unknown" : character.weight + " cm"}`}</span>
+                            </div>
+                            <hr className='border-fire-brick' />
+                            <div className="flex justify-between bg-tacao px-2 py-3">
+                                <strong>Nationality</strong>
+                                <span className="outfit  text-light">{`${!character.nationality ? "Unknown" : character.nationality}`}</span>
+                            </div>
+                            <hr className='border-fire-brick' />
+                            <div className="flex justify-between bg-tacao px-2 py-3">
+                                <strong>Occupation</strong>
+                                <span className="outfit  text-light">{`${!character.occupation ? "Unknown" : character.occupation}`}</span>
+                            </div>
+                            <hr className='border-fire-brick' />
+                            <div className="flex justify-between bg-tacao px-2 py-3">
+                                <strong>Manga Debut</strong>
+                                <span className="outfit  text-light">Chapter {character.manga_debut}</span>
                             </div>
                         </div>
-                        <img src={character.character_image_url} alt={character.name} className="max-h-[60vh] object-contain py-5" />
                     </div>
-                
+                    <img src={character.character_image_url} alt={character.name} className="max-h-[60vh] object-contain py-5" />
+                </div>
+
                 <div className='w-full '>
                     <div className="mb-6">
                         <h2 className="text-2xl font-demibold pb-5">Personality</h2>
@@ -150,16 +153,16 @@ const CharacterPage = () => {
                         <h2 className="text-2xl font-demibold pb-5">Relationships</h2>
                         {relationships.map(rel => (
                             <div key={rel.id} className="mb-2">
-                                <h3 className="font-bold text-xl outfit p-2">{rel.characters.name}</h3>
+                                <Link to={`/character/${rel.related_to}`}> <h3 className="font-bold text-xl outfit p-2 w-full">{rel.characters.name}</h3></Link>
                                 <p className='text-lg outfit p-2'>{rel.relationship_description}</p>
                             </div>
                         ))}
                     </div>
                     <div className="mb-6">
-                        <h2 className="text-2xl font-semibold">Quotes</h2>
+                        <h2 className="text-2xl font-demibold pb-5">Quotes</h2>
                         {quotes.map(quote => (
                             <div key={quote.id} className="mb-2">
-                                <p>{quote.text}</p>
+                                <p className='outfit'>"{quote.quote}" - <span className='capitalize text-fire-brick underline'> <Link to={`/chapter/${quote.chapter_id}`}> chapter {quote.chapter_id}</Link></span></p>
                             </div>
                         ))}
                     </div>
@@ -230,7 +233,7 @@ const CharacterPage = () => {
                         <h2 className="text-2xl font-demibold pb-5">Personality</h2>
                         <p className='outfit text-xl text-justify'>{character.personality}</p>
                     </div>
-                    {abilities && (
+                    {abilities.length >0 && (
                         <div className="mb-6">
                             <h2 className="text-2xl font-demibold pb-5">Abilities</h2>
                             {abilities.map(ability => (
@@ -245,19 +248,21 @@ const CharacterPage = () => {
                         <h2 className="text-2xl font-demibold pb-5">Relationships</h2>
                         {relationships.map(rel => (
                             <div key={rel.id} className="mb-2">
-                                <h3 className="font-bold text-xl outfit p-2">{rel.characters.name}</h3>
+                                <Link to={`/character/${rel.related_to}`}> <h3 className="font-bold text-xl outfit p-2 w-full">{rel.characters.name}</h3></Link>
                                 <p className='text-lg outfit p-2'>{rel.relationship_description}</p>
                             </div>
                         ))}
                     </div>
-                    <div className="mb-6">
-                        <h2 className="text-2xl font-semibold">Quotes</h2>
-                        {quotes.map(quote => (
-                            <div key={quote.id} className="mb-2">
-                                <p>{quote.text}</p>
-                            </div>
-                        ))}
-                    </div>
+                    {quotes.length >0 && (
+                        <div className="mb-6">
+                            <h2 className="text-2xl font-demibold pb-5">Quotes</h2>
+                            {quotes.map(quote => (
+                                <div key={quote.id} className="mb-2">
+                                    <p className='outfit text-lg'>"{quote.quote}" - <span className='capitalize text-fire-brick underline'> <Link to={`/chapter/${quote.chapter_id}`}> chapter {quote.chapter_id}</Link></span></p>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </section>
 
