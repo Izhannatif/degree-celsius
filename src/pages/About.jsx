@@ -42,7 +42,7 @@ const About = () => {
                                     </a>
                                     <a className='bg-matte-black text-light w-40 px-5 py-2 rounded-xl' target='_blank'>
                                         <li className='flex gap-5 items-center'> <FaXTwitter className='h-8 w-8 text-white transition-all duration-300' /> Twitter</li></a>
-                                    <a className='bg-red-600 text-light w-40 px-5 py-2 rounded-xl' target='_blank'>
+                                    <a className='bg-red-600 text-light w-40 px-5 py-2 rounded-xl' target='_blank' href="https://youtube.com/@thermogear_warrior">
                                         <li className='flex gap-5 items-center'> <FaYoutube className='h-8 w-8 text-light transition-all 
                                     duration-300' /> YouTube</li>
                                     </a>
