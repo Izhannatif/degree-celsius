@@ -249,7 +249,7 @@ const Homepage = () => {
 
                 {/* Homepage Fifth Div Start */}
 
-                <div className='h-full w-full bg-stone-200'>
+                {/* <div className='h-full w-full bg-stone-200'>
                     <div className='h-16 w-16 bg-light relative -top-8 -left-10 rotate-45'></div>
                     <div className=''>
                         <div className='w-full flex flex-col items-center justify-center'>
@@ -263,8 +263,6 @@ const Homepage = () => {
                                 Hear what our readers have to say about the comic series. Join them on their epic adventure with stunning visuals and captivating storytelling.
                             </p>
                         </div>
-
-                        {/* Swiper for reviews */}
                         <div className="px-20 md:py-10 w-full">
                             <Swiper
                                 spaceBetween={20}
@@ -302,12 +300,12 @@ const Homepage = () => {
                         </div>
                     </div>
                     <div className='h-16 w-16 bg-light relative top-8 left-[98%] rotate-45'></div>
-                </div>
+                </div> */}
 
                 {/* Homepage Fifth Div End */}
 
                 {/* Homepage Sixth Div Start */}
-                <div className='w-full h-full bg-light flex flex-col justify-center items-center p-5 md:p-10'>
+                <div className='w-full h-full bg-stone-200 flex flex-col justify-center items-center p-5 md:p-10'>
                     <div className='w-full flex flex-col items-center justify-center'>
                         <div className='text-lg text-fire-brick font-medium px-10 py-3'>Gallery</div>
                         <div className='flex items-end justify-between px-10'>

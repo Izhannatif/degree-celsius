@@ -32,7 +32,7 @@ const Wiki = () => {
         <section className='w-full h-full p-10'>
             <div className=' flex flex-col'>
                 <div className='text-4xl font-bold text-matte-black w-full text-center'>Characters</div>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full py-10 gap-5'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full py-10 gap-5 place-items-center'>
 
                     {
                         characters.map((character) => (
