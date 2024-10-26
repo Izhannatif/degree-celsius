@@ -99,8 +99,9 @@ const Homepage = () => {
                 {/* Homepage First Div Start */}
                 <div className='header-div h-[90vh] w-full flex items-center justify-center bg-matte-black flex-col px-1'>
                     <p className='text-tacao text-md font-demibold pb-2'>Welcome to Degree Celsius 👋</p>
-                    <h1 className='text-4xl md:text-7xl font-extrabold text-light text-center pb-10'> Meet your <br /> new comic book hero</h1>
-                    <p className='text-xs md:text-sm tracking-wider text-light font-regular w-3/4 text-center pb-10'>Discover a world of thrilling adventures and unforgettable characters. Join our protagonist on their epic quest With stunning visuals and captivating storytelling, this comic series will leave you wanting more.</p>
+                    <h1 className='text-4xl md:text-7xl font-extrabold text-light text-center pb-10'>Gaze upon
+                    <br />a horrific future</h1>
+                    <p className='text-xs md:text-sm tracking-wider text-light font-regular w-3/4 text-center pb-10'>Explore a world with advanced powerful technology and rigid systems of control. Join our characters as they try to navigate a world where technology gets closer and closer to stripping them of their privacy and autonomy and learn how they can overcome it.</p>
                     <CustomButton width='238' height='57' text={'Learn More'} color={'fill-tacao'} />
                 </div>
                 {/* Homepage First Div End */}
@@ -116,8 +117,8 @@ const Homepage = () => {
                     <div className='w-full md:w-1/2 flex justify-center items-center h-full p-5'>
                         <div className='h-full md:h-[80vh] w-full flex items-start flex-col justify-center text-center md:text-start'>
                             <p className='font-medium p-2 text-fire-brick w-full'>Featured Comics</p>
-                            <p className='text-3xl md:text-5xl font-extrabold w-full md:w-3/4 pt-2 pb-6'>Announcing Gooodyng: The Polymath</p>
-                            <p className='text-sm font-regular tracking-wide text-stone-600 w-full md:w-3/4 pb-5'>Discover a world of thrilling adventures and unforgettable characters. Join our protagonist on their epic quest With stunning visuals and captivating storytelling, this comic series will leave you wanting more.</p>
+                            <p className='text-3xl md:text-5xl font-extrabold w-full md:w-3/4 pt-2 pb-6'>Announcing Degrees Celsius a new upcoming Shonen</p>
+                            <p className='text-sm font-regular tracking-wide text-stone-600 w-full md:w-3/4 pb-5'>Set in a sci fi dystopia where technology is used for sinister purposes. Degrees Celsius is a story about breaking systems of control and forging your own destiny even in a world where others try to force their will upon you. Learn to liberate yourself not only from the pressures of societal expectations but the mental hang ups we have that often stop us from reaching our goals.</p>
                             <div className='w-full flex items-center justify-center md:justify-start'><CustomButton width='200' height='50' text={'Learn More'} color={'fill-fire-brick'} /></div>
                         </div>
                     </div>
@@ -192,7 +193,7 @@ const Homepage = () => {
                             <div className='flex items-end justify-between px-10'>
                                 <div className='text-5xl font-medium text-matte-black text-center lg:text-start '>Meet All of <br />Our Characters</div>
                             </div>
-                            <p className='w-full py-10 pl-10 text-sm tracking-wide font-regular text-stone-700 text-center lg:text-start'>Discover a world of thrilling adventures and unforgettable characters. Join our protagonist on their epic quest With stunning visuals and captivating storytelling, this comic series will leave you wanting more.</p>
+                            <p className='w-full py-10 pl-10 text-sm tracking-wide font-regular text-stone-700 text-center lg:text-start'>From corrupt politicians and business men, war veterans with tragic backgrounds and workers simply trying to survive and keep their head down. Degrees Celsius has a diverse range of characters who explore themes of control, freedom and dealing with the mental obstacles that often imprison and hold us back.</p>
                             <div className='px-10'>
                                 <CustomButton width='200' height='50' text={'See All'} color={'fill-midnight-blue'} />
                             </div>
@@ -313,9 +314,6 @@ const Homepage = () => {
                                 Some of Our work
                             </div>
                         </div>
-                        <p className='w-2/3 text-center py-5 text-sm tracking-wide font-regular text-stone-700'>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio ipsum suscipit cum ex at ad molestias illo hic! Maxime explicabo voluptates laboriosam consequatur exercitationem ab, veniam dolorem aut sint doloremque!
-                        </p>
                     </div>
 
                     <div className='w-11/12 h-full grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-3  py-10'>
