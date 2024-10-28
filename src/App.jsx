@@ -12,6 +12,7 @@ import ScrollToTop from './components/ScrollToTop';
 import { AnimatePresence } from 'framer-motion';
 import Comics from './pages/Comics';
 import Wiki from './pages/Wiki';
+import Gallery from './pages/Gallery';
 
 function App() {
   const location = useLocation();
@@ -27,6 +28,7 @@ function App() {
           <Route path='/wiki' element={<Wiki />} />
           <Route path='/character/:characterId' element={<CharacterPage />} />
           <Route path='/chapter/:chapterId' element={<ChapterPage />} />
+          <Route path='/gallery' element={<Gallery />} />
         </Routes>
       </AnimatePresence>
       <Footer />
