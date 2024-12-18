@@ -7,7 +7,7 @@ const Footer = () => {
             <div className='font-heavy text-6xl md:text-8xl lg:text-9xl text-light pb-5 w-full text-center'>
                 DEGREE <br className='block lg:hidden' /> CELSIUS.
             </div>
-            <p className='text-white border-t w-full text-center py-4 font-regular'>Powered By  <span className='underline font-demibold'><a href="https://swiftcoda.com" target="_blank">SwiftCoda.</a></span></p>
+            <p className='text-white border-t w-full text-center py-4 font-regular'>Powered By  <span className='underline font-demibold'><a href="https://encoremnd.com" target="_blank">EncoreMnd.</a></span></p>
 
         </section>
     )
