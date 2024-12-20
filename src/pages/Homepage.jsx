@@ -115,7 +115,7 @@ const Homepage = () => {
                         <CustomButton width='238' height='57' text={'Learn More'} color={'fill-tacao'} />
                     </div>
                     {/* Homepage First Div End */}
-
+                    
                     {/* Homepage Second Div Start */}
                     <div className='h-full md:h-[90vh] w-full flex flex-col-reverse md:flex-row  justify-center items-center gap-5 md:gap-20 px-5 md:px-10 '>
                         <motion.div 
