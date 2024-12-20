@@ -23,6 +23,7 @@ const CharacterPage = () => {
 
         if (characterError) throw characterError;
         setCharacter(characterData);
+        console.log(characterData);
 
         // Fetch character abilities
         const { data: abilitiesData, error: abilitiesError } = await supabase
@@ -114,7 +115,7 @@ const CharacterPage = () => {
               <div className="flex justify-between bg-tacao px-2 py-3">
                 <strong>Birthday</strong>
                 <span className="outfit  text-light">{`${
-                  !character.birthday ? "Unknown" : character.birthday
+                  !character.birthday ? "Unknown" : String(character.birthday).slice(0,4)
                 }`}</span>
               </div>
               <hr className="border-fire-brick" />
@@ -175,6 +176,14 @@ const CharacterPage = () => {
               {character.personality}
             </p>
           </div>
+          {character.backstory &&
+          <div className="mb-6">
+            <h2 className="text-2xl font-demibold pb-5">Backstory</h2>
+            <p className="outfit text-xl text-justify">
+              {character.backstory}
+            </p>
+          </div>
+          }
           {abilities && (
             <div className="mb-6">
               <h2 className="text-2xl font-demibold pb-5">Abilities</h2>
@@ -259,7 +268,7 @@ const CharacterPage = () => {
                 <div className="flex justify-between bg-tacao px-2 py-3">
                   <strong>Birthday</strong>
                   <span className="outfit  text-light">{`${
-                    !character.birthday ? "Unknown" : character.birthday
+                    !character.birthday ? "Unknown" : String(character.birthday).slice(0,4)
                   }`}</span>
                 </div>
                 <hr className="border-fire-brick" />
@@ -315,6 +324,14 @@ const CharacterPage = () => {
               {character.personality}
             </p>
           </div>
+          { character.backstory &&
+          <div className="mb-6">
+            <h2 className="text-2xl font-demibold pb-5">Backstory</h2>
+            <p className="outfit text-xl text-justify">
+              {character.backstory}
+            </p>
+          </div>
+          }
           {abilities.length > 0 && (
             <div className="mb-6">
               <h2 className="text-2xl font-demibold pb-5">Abilities</h2>
