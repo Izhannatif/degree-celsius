@@ -117,7 +117,7 @@ const Homepage = () => {
                     {/* Homepage First Div End */}
 
                     {/* Homepage Second Div Start */}
-                    <div className='h-full md:h-[80vh] w-full flex flex-col-reverse md:flex-row  justify-center items-center gap-5 md:gap-20 px-5 md:px-10'>
+                    <div className='h-full md:h-[90vh] w-full flex flex-col-reverse md:flex-row  justify-center items-center gap-5 md:gap-20 px-5 md:px-10 '>
                         <motion.div 
                         initial={{ x: '-100%' }}
                         animate={{ x: '0%' }}
