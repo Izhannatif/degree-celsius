@@ -87,6 +87,9 @@ const CharacterPage = () => {
 
   return (
     <>
+
+      {/* DESKTOP VIEW */}
+
       <section className="flex md:hidden flex-col p-5 bg-white items-center">
         <img
           src={character.character_image2_url}
@@ -107,51 +110,44 @@ const CharacterPage = () => {
             <div className="flex flex-col gap-0">
               <div className="flex justify-between bg-tacao px-2 py-3 ">
                 <strong>Age</strong>
-                <span className="outfit text-light ">{`${
-                  !character.age ? "Unknown" : character.age
-                }`}</span>
+                <span className="outfit text-light ">{`${!character.age ? "Unknown" : character.age
+                  }`}</span>
               </div>
               <hr className="border-fire-brick" />
               <div className="flex justify-between bg-tacao px-2 py-3">
                 <strong>Birthday</strong>
-                <span className="outfit  text-light">{`${
-                  !character.birthday ? "Unknown" : String(character.birthday).slice(0,4)
-                }`}</span>
+                <span className="outfit  text-light">{`${!character.birthday ? "Unknown" : String(character.birthday).slice(0, 4)
+                  }`}</span>
               </div>
               <hr className="border-fire-brick" />
               <div className="flex justify-between bg-tacao px-2 py-3">
                 <strong>Gender</strong>
-                <span className="outfit  text-light">{`${
-                  !character.gender ? "Unknown" : character.gender
-                }`}</span>
+                <span className="outfit  text-light">{`${!character.gender ? "Unknown" : character.gender
+                  }`}</span>
               </div>
               <hr className="border-fire-brick" />
               <div className="flex justify-between bg-tacao px-2 py-3">
                 <strong>Height</strong>
-                <span className="outfit  text-light">{`${
-                  !character.height ? "Unknown" : character.height + " cm"
-                }`}</span>
+                <span className="outfit  text-light">{`${!character.height ? "Unknown" : character.height + " cm"
+                  }`}</span>
               </div>
               <hr className="border-fire-brick" />
               <div className="flex justify-between bg-tacao px-2 py-3">
                 <strong>Weight</strong>
-                <span className="outfit  text-light">{`${
-                  !character.weight ? "Unknown" : character.weight + " cm"
-                }`}</span>
+                <span className="outfit  text-light">{`${!character.weight ? "Unknown" : character.weight + " cm"
+                  }`}</span>
               </div>
               <hr className="border-fire-brick" />
               <div className="flex justify-between bg-tacao px-2 py-3">
                 <strong>Nationality</strong>
-                <span className="outfit  text-light">{`${
-                  !character.nationality ? "Unknown" : character.nationality
-                }`}</span>
+                <span className="outfit  text-light">{`${!character.nationality ? "Unknown" : character.nationality
+                  }`}</span>
               </div>
               <hr className="border-fire-brick" />
               <div className="flex justify-between bg-tacao px-2 py-3">
                 <strong>Occupation</strong>
-                <span className="outfit  text-light">{`${
-                  !character.occupation ? "Unknown" : character.occupation
-                }`}</span>
+                <span className="outfit  text-light">{`${!character.occupation ? "Unknown" : character.occupation
+                  }`}</span>
               </div>
               <hr className="border-fire-brick" />
               <div className="flex justify-between bg-tacao px-2 py-3">
@@ -177,12 +173,20 @@ const CharacterPage = () => {
             </p>
           </div>
           {character.backstory &&
-          <div className="mb-6">
-            <h2 className="text-2xl font-demibold pb-5">Backstory</h2>
-            <p className="outfit text-xl text-justify">
-              {character.backstory}
-            </p>
-          </div>
+            <div className="mb-6">
+              <h2 className="text-2xl font-demibold pb-5">Backstory</h2>
+              <p className="outfit text-xl text-justify">
+                {character.backstory}
+              </p>
+            </div>
+          }
+          {
+            character.character_image3_url &&
+            <img
+              src={character.character_image3_url}
+              alt={character.name}
+              className="max-h-[60vh] object-contain py-5"
+            />
           }
           {abilities && (
             <div className="mb-6">
@@ -235,6 +239,13 @@ const CharacterPage = () => {
         </div>
       </section>
 
+
+
+
+      {/* MOBILE VIEW */}
+
+
+
       <section className="hidden md:flex flex-col p-20 bg-white">
         <div className="w-full h-max flex justify-between gap-10">
           <div className="w-1/2 flex flex-col gap-5">
@@ -260,51 +271,44 @@ const CharacterPage = () => {
               <div className="flex flex-col gap-0">
                 <div className="flex justify-between bg-tacao px-2 py-3 ">
                   <strong>Age</strong>
-                  <span className="outfit text-light ">{`${
-                    !character.age ? "Unknown" : character.age
-                  }`}</span>
+                  <span className="outfit text-light ">{`${!character.age ? "Unknown" : character.age
+                    }`}</span>
                 </div>
                 <hr className="border-fire-brick" />
                 <div className="flex justify-between bg-tacao px-2 py-3">
                   <strong>Birthday</strong>
-                  <span className="outfit  text-light">{`${
-                    !character.birthday ? "Unknown" : String(character.birthday).slice(0,4)
-                  }`}</span>
+                  <span className="outfit  text-light">{`${!character.birthday ? "Unknown" : String(character.birthday).slice(0, 4)
+                    }`}</span>
                 </div>
                 <hr className="border-fire-brick" />
                 <div className="flex justify-between bg-tacao px-2 py-3">
                   <strong>Gender</strong>
-                  <span className="outfit  text-light">{`${
-                    !character.gender ? "Unknown" : character.gender
-                  }`}</span>
+                  <span className="outfit  text-light">{`${!character.gender ? "Unknown" : character.gender
+                    }`}</span>
                 </div>
                 <hr className="border-fire-brick" />
                 <div className="flex justify-between bg-tacao px-2 py-3">
                   <strong>Height</strong>
-                  <span className="outfit  text-light">{`${
-                    !character.height ? "Unknown" : character.height + " cm"
-                  }`}</span>
+                  <span className="outfit  text-light">{`${!character.height ? "Unknown" : character.height + " cm"
+                    }`}</span>
                 </div>
                 <hr className="border-fire-brick" />
                 <div className="flex justify-between bg-tacao px-2 py-3">
                   <strong>Weight</strong>
-                  <span className="outfit  text-light">{`${
-                    !character.weight ? "Unknown" : character.weight + " cm"
-                  }`}</span>
+                  <span className="outfit  text-light">{`${!character.weight ? "Unknown" : character.weight + " cm"
+                    }`}</span>
                 </div>
                 <hr className="border-fire-brick" />
                 <div className="flex justify-between bg-tacao px-2 py-3">
                   <strong>Nationality</strong>
-                  <span className="outfit  text-light">{`${
-                    !character.nationality ? "Unknown" : character.nationality
-                  }`}</span>
+                  <span className="outfit  text-light">{`${!character.nationality ? "Unknown" : character.nationality
+                    }`}</span>
                 </div>
                 <hr className="border-fire-brick" />
                 <div className="flex justify-between bg-tacao px-2 py-3">
                   <strong>Occupation</strong>
-                  <span className="outfit  text-light">{`${
-                    !character.occupation ? "Unknown" : character.occupation
-                  }`}</span>
+                  <span className="outfit  text-light">{`${!character.occupation ? "Unknown" : character.occupation
+                    }`}</span>
                 </div>
                 <hr className="border-fire-brick" />
                 <div className="flex justify-between bg-tacao px-2 py-3">
@@ -324,13 +328,21 @@ const CharacterPage = () => {
               {character.personality}
             </p>
           </div>
-          { character.backstory &&
-          <div className="mb-6">
-            <h2 className="text-2xl font-demibold pb-5">Backstory</h2>
-            <p className="outfit text-xl text-justify">
-              {character.backstory}
-            </p>
-          </div>
+          {character.backstory &&
+            <div className="mb-6">
+              <h2 className="text-2xl font-demibold pb-5">Backstory</h2>
+              <p className="outfit text-xl text-justify">
+                {character.backstory}
+              </p>
+            </div>
+          }
+          {
+            character.character_image3_url &&
+            <img
+              src={character.character_image3_url}
+              alt={character.name}
+              className="max-h-[60vh] object-contain py-5"
+            />
           }
           {abilities.length > 0 && (
             <div className="mb-6">
@@ -345,6 +357,14 @@ const CharacterPage = () => {
               ))}
             </div>
           )}
+          {
+            character.character_image4_url &&
+            <img
+              src={character.character_image4_url}
+              alt={character.name}
+              className="max-h-[60vh] object-contain py-5"
+            />
+          }
           <div className="mb-6">
             <h2 className="text-2xl font-demibold pb-5">Relationships</h2>
             {relationships.map((rel) => (
